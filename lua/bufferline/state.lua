@@ -241,6 +241,7 @@ function state.restore_buffers(buffer_data)
   end
 
   state.buffers = {}
+  print(vim.inspect(buffer_data))
   for _, data in ipairs(buffer_data) do
     local bufnr = bufadd(data.name or data)
 
